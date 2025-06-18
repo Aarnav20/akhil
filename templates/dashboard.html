@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plutus TalentX – Resume & JD Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="/static/logo.svg" alt="Plutus TalentX" class="logo" />
+    <h1>Plutus TalentX</h1>
+    <p class="subtitle">Smart Resume & JD Matching Assistant</p>
+    <form id="analyze-form" enctype="multipart/form-data">
+      <label for="resume" class="input-label">Upload Resume (PDF/Text):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.txt" required>
+      <label for="jd_text" class="input-label">Paste Job Description:</label>
+      <textarea id="jd_text" name="jd_text" placeholder="Paste the JD here..." required></textarea>
+      <button type="submit" id="analyze-btn">Analyze</button>
+    </form>
+    <div id="loading" class="loading" style="display:none;">Analyzing...</div>
+    <div id="result" class="result-box" style="display:none;"></div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
